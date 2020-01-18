@@ -1,7 +1,7 @@
 {
   "name": "safe-event-emitter",
   "version": "1.0.1",
-  "description": "",
+  "description": "A EventEmitter that isolates the emitter from errors in handlers",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
