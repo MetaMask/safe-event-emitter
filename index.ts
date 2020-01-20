@@ -1,4 +1,3 @@
-/* global Reflect */
 import { EventEmitter } from 'events';
 
 type Handler = (...args: any[]) => void;
