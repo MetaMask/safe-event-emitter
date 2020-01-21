@@ -41,11 +41,11 @@ function arrayClone<T> (arr: T[], n: number): T[] {
 
 export default class SafeEventEmitter extends EventEmitter {
   emit (type: string, ...args: any[]): boolean {
-    let doError = (type === 'error');
+    let doError = type === 'error';
 
     const events: EventMap = (this as any)._events;
     if (events !== undefined) {
-      doError = (doError && events.error === undefined);
+      doError = doError && events.error === undefined;
     } else if (!doError) {
       return false;
     }
