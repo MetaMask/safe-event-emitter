@@ -1,7 +1,7 @@
 {
   "name": "@metamask/safe-event-emitter",
   "version": "1.0.1",
-  "description": "A EventEmitter that isolates the emitter from errors in handlers",
+  "description": "An EventEmitter that isolates the emitter from errors in handlers",
   "main": "index.js",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
