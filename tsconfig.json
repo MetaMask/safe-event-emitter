@@ -3,7 +3,7 @@
     "declaration": true,
     "experimentalDecorators": true,
     "importHelpers": false,
-    "module": "commonjs",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "removeComments": false,
     "sourceMap": true,
