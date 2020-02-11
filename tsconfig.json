@@ -8,7 +8,7 @@
     "removeComments": false,
     "sourceMap": true,
     "strict": true,
-    "target": "es5"
+    "target": "ES2017"
   },
   "include": [
     "./**/*.ts"
