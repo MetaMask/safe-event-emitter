@@ -16,9 +16,10 @@ function safeApply<T, A extends any[]> (handler: (this: T, ...args: A) => void, 
   }
 }
 
-function arrayClone<T> (arr: T[], n: number): T[] {
+function arrayClone<T> (arr: T[]): T[] {
+  const n = arr.length;
   const copy = new Array(n);
-  for (let i = 0; i < n; ++i) {
+  for (let i = 0; i < n; i++) {
     copy[i] = arr[i];
   }
   return copy;
@@ -62,8 +63,8 @@ export default class SafeEventEmitter extends EventEmitter {
       safeApply(handler, this, args);
     } else {
       const len = handler.length;
-      const listeners = arrayClone(handler, len);
-      for (let i = 0; i < len; ++i) {
+      const listeners = arrayClone(handler);
+      for (let i = 0; i < len; i++) {
         safeApply(listeners[i], this, args);
       }
     }
