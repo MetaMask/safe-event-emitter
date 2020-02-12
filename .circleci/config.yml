@@ -1,7 +1,7 @@
 version: 2.1
 
 workflows:
-  lint:
+  build-test:
     jobs:
       - prep-deps
       - test-build:
