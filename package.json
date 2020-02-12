@@ -15,7 +15,7 @@
   "scripts": {
     "build": "tsc --project .",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .ts,.js"
   },
   "author": "",
   "license": "ISC",
