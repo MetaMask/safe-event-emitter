@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "experimentalDecorators": true,
-    "importHelpers": false,
     "module": "CommonJS",
-    "moduleResolution": "node",
-    "removeComments": false,
     "sourceMap": true,
     "strict": true,
     "target": "ES2017"
