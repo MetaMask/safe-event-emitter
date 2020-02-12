@@ -7,6 +7,11 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "index.js.map"
+  ],
   "scripts": {
     "build": "tsc --project .",
     "test": "jest",
