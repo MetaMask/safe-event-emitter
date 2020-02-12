@@ -5,24 +5,9 @@ type EventMap = {
   [k: string]: Handler | Handler[] | undefined;
 };
 
-/* istanbul ignore next */
-function _ReflectApply<T, A extends any[], R> (target: (this: T, ...args: A) => R, receiver: T, args: A): R {
-  return Function.prototype.apply.call(target, receiver, args);
-}
-
-const R = typeof Reflect === 'object'
-  ? Reflect
-  /* istanbul ignore next */
-  : null;
-
-const ReflectApply = R && typeof R.apply === 'function'
-  ? R.apply
-  /* istanbul ignore next */
-  : _ReflectApply;
-
 function safeApply<T, A extends any[]> (handler: (this: T, ...args: A) => void, context: T, args: A): void {
   try {
-    ReflectApply(handler, context, args);
+    Reflect.apply(handler, context, args);
   } catch (err) {
     // Throw error after timeout so as not to interrupt the stack
     setTimeout(() => {
