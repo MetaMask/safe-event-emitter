@@ -7,7 +7,7 @@ API is the same as `EventEmitter`.
 ### usage
 
 ```js
-const SafeEventEmitter = require('safe-event-emitter')
+import SafeEventEmitter from 'safe-event-emitter'
 
 const ee = new SafeEventEmitter()
 ee.on('boom', () => { throw new Error() })

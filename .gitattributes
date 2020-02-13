@@ -1,0 +1,7 @@
+* text=auto
+*.d.ts linguist-generated=true
+
+# Reviewing the lockfile contents is an important step in verifying that
+# we're using the dependencies we expect to be using
+package-lock.json linguist-generated=false
+yarn.lock linguist-generated=false
