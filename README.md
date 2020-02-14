@@ -13,7 +13,7 @@ $ yarn add '@metamask/safe-event-emitter'
 ### Usage
 
 ```js
-import SafeEventEmitter from 'safe-event-emitter';
+import SafeEventEmitter from '@metamask/safe-event-emitter';
 
 const ee = new SafeEventEmitter();
 ee.on('boom', () => { throw new Error(); });
