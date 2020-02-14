@@ -48,7 +48,7 @@ export default class SafeEventEmitter extends EventEmitter {
         throw er; // Unhandled 'error' event
       }
       // At least give some kind of context to the user
-      const err = new Error('Unhandled error.' + (er ? ' (' + er.message + ')' : ''));
+      const err = new Error(`Unhandled error.${er ? ` (${er.message})` : ''}`);
       (err as any).context = er;
       throw err; // Unhandled 'error' event
     }
