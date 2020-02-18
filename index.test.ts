@@ -1,6 +1,6 @@
 import SafeEventEmitter from './index';
 
-describe('safeEventEmitter', () => {
+describe('SafeEventEmitter', () => {
   it('can be constructed without error', () => {
     expect(new SafeEventEmitter()).toBeDefined();
   });
