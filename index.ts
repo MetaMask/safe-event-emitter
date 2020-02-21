@@ -1,9 +1,9 @@
 import { EventEmitter } from 'events';
 
 type Handler = (...args: any[]) => void;
-type EventMap = {
+interface EventMap {
   [k: string]: Handler | Handler[] | undefined;
-};
+}
 
 function safeApply<T, A extends any[]> (handler: (this: T, ...args: A) => void, context: T, args: A): void {
   try {
@@ -19,7 +19,7 @@ function safeApply<T, A extends any[]> (handler: (this: T, ...args: A) => void, 
 function arrayClone<T> (arr: T[]): T[] {
   const n = arr.length;
   const copy = new Array(n);
-  for (let i = 0; i < n; i++) {
+  for (let i = 0; i < n; i += 1) {
     copy[i] = arr[i];
   }
   return copy;
@@ -40,7 +40,7 @@ export default class SafeEventEmitter extends EventEmitter {
     if (doError) {
       let er;
       if (args.length > 0) {
-        er = args[0];
+        [er] = args;
       }
       if (er instanceof Error) {
         // Note: The comments on the `throw` lines are intentional, they show
@@ -64,7 +64,7 @@ export default class SafeEventEmitter extends EventEmitter {
     } else {
       const len = handler.length;
       const listeners = arrayClone(handler);
-      for (let i = 0; i < len; i++) {
+      for (let i = 0; i < len; i += 1) {
         safeApply(listeners[i], this, args);
       }
     }

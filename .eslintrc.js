@@ -6,4 +6,13 @@ module.exports = {
     '@metamask/eslint-config/config/nodejs',
     '@metamask/eslint-config/config/typescript',
   ],
+  overrides: [{
+    files: [
+      '.eslintrc.js',
+      'jest.config.js',
+    ],
+    parserOptions: {
+      sourceType: 'script',
+    },
+  }],
 };

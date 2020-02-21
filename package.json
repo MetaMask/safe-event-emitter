@@ -20,17 +20,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@metamask/eslint-config": "^1.2.0",
+    "@metamask/eslint-config": "^2.0.0",
     "@types/jest": "^24.9.0",
     "@types/node": "^10.17.13",
-    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.16.0",
     "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jest": "^23.6.0",
     "jest": "^24.9.0",
     "ts-jest": "^24.3.0",
     "typescript": "^3.7.5"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

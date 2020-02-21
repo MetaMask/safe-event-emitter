@@ -1,4 +1,4 @@
-import SafeEventEmitter from './index';
+import SafeEventEmitter from '.';
 
 describe('SafeEventEmitter', () => {
   it('can be constructed without error', () => {
