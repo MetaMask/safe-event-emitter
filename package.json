@@ -20,7 +20,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@metamask/eslint-config": "^2.0.0",
+    "@metamask/eslint-config": "^3.1.0",
     "@types/jest": "^24.9.0",
     "@types/node": "^10.17.13",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
