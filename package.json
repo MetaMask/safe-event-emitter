@@ -13,6 +13,7 @@
     "index.js.map"
   ],
   "scripts": {
+    "prepublishOnly": "yarn build",
     "build": "tsc --project .",
     "test": "jest",
     "lint": "eslint . --ext .ts,.js"
