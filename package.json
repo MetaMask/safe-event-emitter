@@ -22,7 +22,7 @@
   "license": "ISC",
   "devDependencies": {
     "@metamask/eslint-config": "^3.1.0",
-    "@types/jest": "^24.9.0",
+    "@types/jest": "^26.0.15",
     "@types/node": "^10.17.13",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.16.0",
