@@ -36,3 +36,9 @@ The project follows the same release process as the other libraries in the MetaM
 6. Once approved, the PR is squashed & merged
 7. The commit on the base branch is tagged
 8. The tag can be published as needed
+
+## Running tests
+
+```bash
+yarn test
+```
