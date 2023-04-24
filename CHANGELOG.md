@@ -6,16 +6,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-## [3.0.0] - 2023-04-24
-
-### Breaking
-
-- Drop support for Node.js < v12 ([#101](https://github.com/MetaMask/safe-event-emitter/pull/101))
-
-### Changed
-
-- devDependencies and CI updates
-
 ## [2.0.0] - 2020-09-02
 
 ### Changed
