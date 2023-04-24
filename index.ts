@@ -5,7 +5,7 @@ interface EventMap {
   [k: string]: Handler | Handler[] | undefined;
 }
 
-function safeApply<T, A extends any[]> (handler: (this: T, ...args: A) => void, context: T, args: A): void {
+function safeApply<T, A extends any[]>(handler: (this: T, ..._args: A) => void, context: T, args: A): void {
   try {
     Reflect.apply(handler, context, args);
   } catch (err) {
@@ -16,7 +16,7 @@ function safeApply<T, A extends any[]> (handler: (this: T, ...args: A) => void, 
   }
 }
 
-function arrayClone<T> (arr: T[]): T[] {
+function arrayClone<T>(arr: T[]): T[] {
   const n = arr.length;
   const copy = new Array(n);
   for (let i = 0; i < n; i += 1) {
@@ -26,7 +26,7 @@ function arrayClone<T> (arr: T[]): T[] {
 }
 
 export default class SafeEventEmitter extends EventEmitter {
-  emit (type: string, ...args: any[]): boolean {
+  emit(type: string, ...args: any[]): boolean {
     let doError = type === 'error';
 
     const events: EventMap = (this as any)._events;
