@@ -2,15 +2,28 @@
   "name": "@metamask/safe-event-emitter",
   "version": "3.0.0",
   "description": "An EventEmitter that isolates the emitter from errors in handlers",
-  "main": "index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "files": [
-    "index.js",
-    "index.d.ts",
-    "index.js.map"
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -21,7 +34,10 @@
   },
   "scripts": {
     "prepublishOnly": "yarn build",
-    "build": "tsc --project .",
+    "build": "yarn build:cjs && yarn build:esm",
+    "build:cjs": "tsc --project .",
+    "build:esm": "tsc --project tsconfig.esm.json && yarn build:esm:rename",
+    "build:esm:rename": "./scripts/rename-esm.sh",
     "test": "jest",
     "lint": "eslint . --ext .ts,.js"
   },
