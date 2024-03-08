@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [3.1.0] - 2024-03-08
+
+### Added
+
+- Add ESM build ([#141](https://github.com/MetaMask/safe-event-emitter/pull/141))
+
 ## [3.0.0] - 2023-04-24
 
 ### Breaking
