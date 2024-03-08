@@ -4,7 +4,7 @@
   "description": "An EventEmitter that isolates the emitter from errors in handlers",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.ts",
+  "types": "dist/cjs/index.d.ts",
   "exports": {
     ".": {
       "import": {
