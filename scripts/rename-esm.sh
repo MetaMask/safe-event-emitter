@@ -14,7 +14,7 @@ for file in dist/esm/*.js; do
 
   # Replace the sourceMappingURL to point to the new `.mjs.map` file.
   sourceMap=$(basename "${file%.js}.mjs.map")
-  sed -i '' "s|//# sourceMappingURL=.*\.js\.map|//# sourceMappingURL=$sourceMap|" "${file%.js}.mjs"
+  perl -i -pe "s|//# sourceMappingURL=.*?\.js\.map|//# sourceMappingURL=$sourceMap|" "${file%.js}.mjs"
 done
 
 for file in dist/esm/*.js.map; do
@@ -22,5 +22,5 @@ for file in dist/esm/*.js.map; do
   mv "$file" "${file%.js.map}.mjs.map"
 
   # Replace the file references in the source map to point to the new `.mjs` file.
-  sed -i '' 's/\.js/\.mjs/g' "${file%.js.map}.mjs.map"
+  perl -i -pe 's/\.js/\.mjs/g' "${file%.js.map}.mjs.map"
 done
