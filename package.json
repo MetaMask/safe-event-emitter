@@ -2,19 +2,14 @@
   "name": "@metamask/safe-event-emitter",
   "version": "3.1.0",
   "description": "An EventEmitter that isolates the emitter from errors in handlers",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.mjs",
-  "types": "dist/cjs/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/esm/index.d.ts",
-        "default": "./dist/esm/index.mjs"
-      },
-      "require": {
-        "types": "./dist/cjs/index.d.ts",
-        "default": "./dist/cjs/index.js"
-      }
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     },
     "./package.json": "./package.json"
   },
@@ -34,10 +29,9 @@
   },
   "scripts": {
     "prepublishOnly": "yarn build",
-    "build": "yarn build:cjs && yarn build:esm",
-    "build:cjs": "tsc --project .",
-    "build:esm": "tsc --project tsconfig.esm.json && yarn build:esm:rename",
-    "build:esm:rename": "./scripts/rename-esm.sh",
+    "build": "tsup --clean && yarn build:types",
+    "build:docs": "typedoc",
+    "build:types": "tsc --project tsconfig.build.json",
     "test": "jest",
     "lint": "eslint . --ext .ts,.js"
   },
@@ -55,7 +49,8 @@
     "eslint-plugin-node": "^11.1.0",
     "jest": "^26.4.2",
     "ts-jest": "^26.4.0",
-    "typescript": "^4.0.5"
+    "tsup": "^8.0.2",
+    "typescript": "~4.8.4"
   },
   "dependencies": {}
 }
