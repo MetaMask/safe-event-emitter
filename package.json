@@ -3,7 +3,7 @@
   "version": "3.1.0",
   "description": "An EventEmitter that isolates the emitter from errors in handlers",
   "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "module": "dist/esm/index.mjs",
   "types": "dist/cjs/index.d.ts",
   "exports": {
     ".": {
