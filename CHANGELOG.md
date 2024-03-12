@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [3.1.1] - 2024-03-12
+
+### Fixed
+
+- Fix ESM module path ([#143](https://github.com/MetaMask/safe-event-emitter/pull/143))
+- Fix ESM source map paths ([#146](https://github.com/MetaMask/safe-event-emitter/pull/146))
+
 ## [3.1.0] - 2024-03-08
 
 ### Added
