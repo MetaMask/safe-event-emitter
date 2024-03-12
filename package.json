@@ -23,7 +23,8 @@
     "access": "public"
   },
   "files": [
-    "dist"
+    "dist",
+    "!*.test.*"
   ],
   "repository": {
     "type": "git",
