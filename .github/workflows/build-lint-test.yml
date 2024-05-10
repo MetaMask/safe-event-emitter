@@ -31,3 +31,9 @@ jobs:
       - run: yarn build
       - run: yarn lint
       - run: yarn test
+      - name: Validate RC changelog
+        if: ${{ startsWith(github.head_ref, 'release/') }}
+        run: yarn auto-changelog validate --rc
+      - name: Validate changelog
+        if: ${{ !startsWith(github.head_ref, 'release/') }}
+        run: yarn auto-changelog validate
