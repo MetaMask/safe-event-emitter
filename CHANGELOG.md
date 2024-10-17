@@ -7,10 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [3.1.2]
-### Uncategorized
-- ci: add workflows for automated release & publish ([#151](https://github.com/MetaMask/safe-event-emitter/pull/151))
-- Bump ws in the npm_and_yarn group across 1 directory ([#152](https://github.com/MetaMask/safe-event-emitter/pull/152))
-- chore: omit test files from published package ([#149](https://github.com/MetaMask/safe-event-emitter/pull/149))
+### Fixed
+- Omit test files from published package ([#149](https://github.com/MetaMask/safe-event-emitter/pull/149))
 
 ## [3.1.1] - 2024-03-12
 ### Fixed
