@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.2]
+### Fixed
+- Omit test files from published package ([#149](https://github.com/MetaMask/safe-event-emitter/pull/149))
+
 ## [3.1.1] - 2024-03-12
 ### Fixed
 - Fix ESM module path ([#143](https://github.com/MetaMask/safe-event-emitter/pull/143))
@@ -23,7 +27,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Migrate to TypeScript ([#1](https://github.com/MetaMask/safe-event-emitter/pull/1))
 
-[Unreleased]: https://github.com/MetaMask/safe-event-emitter/compare/v3.1.1...HEAD
+[Unreleased]: https://github.com/MetaMask/safe-event-emitter/compare/v3.1.2...HEAD
+[3.1.2]: https://github.com/MetaMask/safe-event-emitter/compare/v3.1.1...v3.1.2
 [3.1.1]: https://github.com/MetaMask/safe-event-emitter/compare/v3.1.0...v3.1.1
 [3.1.0]: https://github.com/MetaMask/safe-event-emitter/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/MetaMask/safe-event-emitter/compare/v2.0.0...v3.0.0
