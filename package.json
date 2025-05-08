@@ -46,7 +46,7 @@
   "license": "ISC",
   "devDependencies": {
     "@metamask/auto-changelog": "^2.6.1",
-    "@metamask/eslint-config": "^5.0.0",
+    "@metamask/eslint-config": "^14.0.0",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.21",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
