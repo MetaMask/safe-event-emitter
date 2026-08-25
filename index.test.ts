@@ -29,7 +29,9 @@ describe('SafeEventEmitter', () => {
 
   it('returns false when _events is somehow undefined', () => {
     const see = new SafeEventEmitter();
-    see.on('foo', () => { /* */ });
+    see.on('foo', () => {
+      /* */
+    });
     delete (see as any)._events;
     expect(see.emit('foo', 42)).toBe(false);
   });

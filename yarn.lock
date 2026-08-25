@@ -950,7 +950,6 @@ __metadata:
     eslint-plugin-promise: "npm:^7.1.0"
     jest: "npm:^26.4.2"
     oxfmt: "npm:^0.64.0"
-    rimraf: "npm:^3.0.2"
     ts-jest: "npm:^26.4.0"
     typescript: "npm:~5.3.3"
     typescript-eslint: "npm:^8.48.1"
@@ -5973,7 +5972,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rimraf@npm:^3.0.0, rimraf@npm:^3.0.2":
+"rimraf@npm:^3.0.0":
   version: 3.0.2
   resolution: "rimraf@npm:3.0.2"
   dependencies:

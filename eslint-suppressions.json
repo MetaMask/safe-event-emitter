@@ -5,9 +5,6 @@
     }
   },
   "index.ts": {
-    "@typescript-eslint/consistent-type-definitions": {
-      "count": 1
-    },
     "@typescript-eslint/naming-convention": {
       "count": 3
     },
@@ -19,9 +16,6 @@
     },
     "import-x/no-nodejs-modules": {
       "count": 1
-    },
-    "jsdoc/require-jsdoc": {
-      "count": 6
     }
   }
 }

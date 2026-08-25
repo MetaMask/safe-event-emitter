@@ -2,6 +2,16 @@
   "name": "@metamask/safe-event-emitter",
   "version": "3.1.2",
   "description": "An EventEmitter that isolates the emitter from errors in handlers",
+  "license": "ISC",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MetaMask/safe-event-emitter.git"
+  },
+  "files": [
+    "dist",
+    "!*.test.*"
+  ],
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.cts",
@@ -19,19 +29,8 @@
     "./package.json": "./package.json"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
-  "files": [
-    "dist",
-    "!*.test.*"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/MetaMask/safe-event-emitter.git"
-  },
-  "engines": {
-    "node": ">=12.0.0"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "build": "ts-bridge --project tsconfig.build.json --clean",
@@ -45,8 +44,6 @@
     "lint:misc": "oxfmt --ignore-path .gitignore",
     "test": "jest"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@lavamoat/allow-scripts": "^5.1.0",
     "@lavamoat/preinstall-always-fail": "^3.0.0",
@@ -70,10 +67,12 @@
     "eslint-plugin-promise": "^7.1.0",
     "jest": "^26.4.2",
     "oxfmt": "^0.64.0",
-    "rimraf": "^3.0.2",
     "ts-jest": "^26.4.0",
     "typescript": "~5.3.3",
     "typescript-eslint": "^8.48.1"
+  },
+  "engines": {
+    "node": ">=12.0.0"
   },
   "packageManager": "yarn@4.18.0",
   "lavamoat": {

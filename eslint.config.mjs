@@ -1,7 +1,7 @@
 import base, { createConfig } from '@metamask/eslint-config';
+import jest from '@metamask/eslint-config-jest';
 import nodejs from '@metamask/eslint-config-nodejs';
 import typescript from '@metamask/eslint-config-typescript';
-import jest from '@metamask/eslint-config-jest';
 
 const config = createConfig([
   {
@@ -48,6 +48,15 @@ const config = createConfig([
   {
     files: ['**/*.test.ts', '**/*.test.js'],
     extends: [jest, nodejs],
+  },
+
+  {
+    rules: {
+      // TODO: Re-enable these. They don't work well with ESLint suppressions.
+      'jsdoc/require-jsdoc': 'off',
+      'jsdoc/require-param-description': 'off',
+      'jsdoc/require-returns': 'off',
+    },
   },
 ]);
 
