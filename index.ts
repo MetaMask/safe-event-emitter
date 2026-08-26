@@ -69,10 +69,9 @@ export default class SafeEventEmitter extends EventEmitter {
       const len = handler.length;
       const listeners = arrayClone(handler);
       for (let i = 0; i < len; i += 1) {
-        const listener = listeners[i];
-        if (listener) {
-          safeApply(listener, this, args);
-        }
+        // `listeners[i]` is guaranteed to be defined, so we use a type
+        // assertion.
+        safeApply(listeners[i] as Handler, this, args);
       }
     }
 
