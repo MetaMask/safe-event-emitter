@@ -9,12 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [3.1.3]
 
-### Uncategorized
+### Fixed
 
-- chore: align with module template (Yarn 4.18.0, ESLint 9, ESM fix) ([#164](https://github.com/MetaMask/safe-event-emitter/pull/164))
-- chore: add workflow_dispatch to security-code-scanner ([#155](https://github.com/MetaMask/safe-event-emitter/pull/155))
-- 3.1.2 ([#153](https://github.com/MetaMask/safe-event-emitter/pull/153))
-- Bump ws in the npm_and_yarn group across 1 directory ([#152](https://github.com/MetaMask/safe-event-emitter/pull/152))
+- Fix ESM types ([#164](https://github.com/MetaMask/safe-event-emitter/pull/164))
+  - The types previously referred to a `.d.ts` file while the `package.json` did not contain `type: 'module'`, meaning TypeScript reads it as CommonJS types, causing errors.
 
 ## [3.1.2]
 
