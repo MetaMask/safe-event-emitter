@@ -1,11 +1,15 @@
 import { EventEmitter } from 'events';
 
 type Handler = (...args: any[]) => void;
-interface EventMap {
+type EventMap = {
   [k: string]: Handler | Handler[] | undefined;
-}
+};
 
-function safeApply<T, A extends any[]>(handler: (this: T, ..._args: A) => void, context: T, args: A): void {
+function safeApply<T, A extends any[]>(
+  handler: (this: T, ..._args: A) => void,
+  context: T,
+  args: A,
+): void {
   try {
     Reflect.apply(handler, context, args);
   } catch (err) {
@@ -65,7 +69,9 @@ export default class SafeEventEmitter extends EventEmitter {
       const len = handler.length;
       const listeners = arrayClone(handler);
       for (let i = 0; i < len; i += 1) {
-        safeApply(listeners[i], this, args);
+        // `listeners[i]` is guaranteed to be defined, so we use a type
+        // assertion.
+        safeApply(listeners[i] as Handler, this, args);
       }
     }
 

@@ -1,0 +1,21 @@
+{
+  "index.test.ts": {
+    "id-length": {
+      "count": 3
+    }
+  },
+  "index.ts": {
+    "@typescript-eslint/naming-convention": {
+      "count": 3
+    },
+    "id-denylist": {
+      "count": 5
+    },
+    "id-length": {
+      "count": 1
+    },
+    "import-x/no-nodejs-modules": {
+      "count": 1
+    }
+  }
+}

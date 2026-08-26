@@ -16,7 +16,9 @@ $ yarn add '@metamask/safe-event-emitter'
 import SafeEventEmitter from '@metamask/safe-event-emitter';
 
 const ee = new SafeEventEmitter();
-ee.on('boom', () => { throw new Error(); });
+ee.on('boom', () => {
+  throw new Error();
+});
 ee.emit('boom'); // No error here
 
 // Error is thrown after setTimeout
@@ -27,8 +29,8 @@ ee.emit('boom'); // No error here
 The project follows the same release process as the other libraries in the MetaMask organization:
 
 1. Create a release branch
-    - For a typical release, this would be based on `master`
-    - To update an older maintained major version, base the release branch on the major version branch (e.g. `1.x`)
+   - For a typical release, this would be based on `master`
+   - To update an older maintained major version, base the release branch on the major version branch (e.g. `1.x`)
 2. Update the changelog
 3. Update version in package.json file (e.g. `yarn version --minor --no-git-tag-version`)
 4. Create a pull request targeting the base branch (e.g. master or 1.x)
